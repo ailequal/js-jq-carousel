@@ -16,9 +16,16 @@ $(document).ready(
     // keyboard
     $(document).keydown(
       function () {
+        // macos key
         if (event.keyCode === 39) {
           clickNext();
         } else if (event.keyCode === 37) {
+          clickPrev();
+        }
+        // windows key
+        else if (event.which === 100) {
+          clickNext();
+        } else if (event.which === 97) {
           clickPrev();
         }
       }
@@ -72,6 +79,5 @@ function clickPrev() {
   }
 }
 
-// bonus adding keyboard command
 // bonus super selecting image from dot
 // super bonus make the script universal for other slider
