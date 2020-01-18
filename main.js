@@ -13,6 +13,16 @@ $(document).ready(
         clickPrev();
       }
     );
+    // keyboard
+    $(document).keydown(
+      function () {
+        if (event.keyCode === 39) {
+          clickNext();
+        } else if (event.keyCode === 37) {
+          clickPrev();
+        }
+      }
+    )
   }
 );
 
