@@ -30,6 +30,28 @@ $(document).ready(
         }
       }
     )
+    $('i.fa-circle').click(
+      function () {
+        // clickIcon();
+        var iconActive = $('i.active');
+        var iconInactive = $(this);
+        var iconIndex = iconInactive.index();
+        var imageActive = $('img.active');
+        var imageInactive = $('img').index(iconIndex);
+        // console.log($('i.fa-circle').index());
+        // console.log($('.images img').index());
+        iconActive.removeClass('active');
+        iconInactive.addClass('active');
+        imageActive.removeClass('active');
+        // imageInactive.addClass('active');
+        // var arrayIcon = [];
+        // $('.nav i').each(
+        //   function (i) {
+        //     arrayIcon.push($('li'));
+        // });
+        // console.log(arrayIcon);
+      }
+    );
   }
 );
 
@@ -78,6 +100,14 @@ function clickPrev() {
     iconPrev.addClass('active');
   }
 }
+
+// function click on dot
+// function clickIcon() {
+//   var iconActive = $('i.active');
+//   var iconInactive = $('i.fa-circle');
+//   iconActive.removeClass('active');
+//   $(this).addClass('active');
+// }
 
 // bonus super selecting image from dot
 // super bonus make the script universal for other slider
